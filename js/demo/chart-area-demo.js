@@ -32,21 +32,51 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
     datasets: [{
-      label: "Earnings",
+      label: "You",
       lineTension: 0.3,
-      backgroundColor: "rgba(78, 115, 223, 0.05)",
+      backgroundColor: "rgba(78, 115, 223, 0.2)",
       borderColor: "rgba(78, 115, 223, 1)",
       pointRadius: 3,
       pointBackgroundColor: "rgba(78, 115, 223, 1)",
       pointBorderColor: "rgba(78, 115, 223, 1)",
-      pointHoverRadius: 3,
-      pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
-      pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: "rgba(78, 115, 223, .3)",
+      pointHoverBorderColor: "rgba(78, 115, 223, .3)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 10000, 5000, 15000, 10000, 20000, 15000, 25000, 20000, 30000, 25000, 40000],
+      data: [0, 100, 500, 1500, 1000, 2000, 1500, 2500],
+    },
+    {
+      label: "Jenna",
+      lineTension: 0.3,
+      backgroundColor: "rgba(30, 40, 80, 0.2)",
+      borderColor: "rgba(30, 40, 80, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(30, 40, 80, 1)",
+      pointBorderColor: "rgba(30, 40, 80, 1)",
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: "rgba(30, 40, 80, .3)",
+      pointHoverBorderColor: "rgba(30, 40, 80, .3)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [0, 50, 100, 2000, 1300, 1700, 3000, 2500],
+    },
+    {
+      label: "Kobe",
+      lineTension: 0.3,
+      backgroundColor: "rgba(200, 40, 10, 0.2)",
+      borderColor: "rgba(200, 40, 10, 1)",
+      pointRadius: 3,
+      pointBackgroundColor: "rgba(200, 40, 10, 1)",
+      pointBorderColor: "rgba(200, 40, 10, 1)",
+      pointHoverRadius: 4,
+      pointHoverBackgroundColor: "rgba(200, 40, 10, .3)",
+      pointHoverBorderColor: "rgba(200, 40, 10, .3)",
+      pointHitRadius: 10,
+      pointBorderWidth: 2,
+      data: [0, 10, 200, 1500, 1000, 1500, 2000, 4000],
     }],
   },
   options: {
@@ -78,7 +108,7 @@ var myLineChart = new Chart(ctx, {
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return number_format(value);
           }
         },
         gridLines: {
@@ -110,7 +140,7 @@ var myLineChart = new Chart(ctx, {
       callbacks: {
         label: function(tooltipItem, chart) {
           var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
-          return datasetLabel + ': $' + number_format(tooltipItem.yLabel);
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
         }
       }
     }
