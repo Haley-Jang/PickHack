@@ -57,7 +57,7 @@
       <li class="nav-item active">
           <a class="nav-link" href="blank 2 copy.html">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Friends Leaderboard</span></a>
+            <span>Meal Tracker</span></a>
         </li>
 
       <!-- Divider -->
@@ -121,9 +121,9 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input id = "searchbox" type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
+                <button class="btn btn-primary" type="button" onclick="work()">
                   <i class="fas fa-search fa-sm"></i>
                 </button>
               </div>
@@ -278,51 +278,64 @@
 
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Who's the Healthiest?</h6>
+              <h6 class="m-0 font-weight-bold text-primary">How have you been eating?</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table id = "mytab1" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>Name</th>
-                      <th>Posts</th>
-                      <th>Cardio</th>
-                      <th>Total Points</th>
+                      <th>Calories</th>
+                      <th>Sugar</th>
+                      <th>Carbs</th>
+                      <th>Fat (Lipids)</th>
                     </tr>
                   </thead>
           
                   <tbody>
                     <tr>
-                      <td>Jenna Li</td>
-                      <td>6</td>
-                      <td>10 hours</td>
-                      <td>6100</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
             
                     </tr>
                     <tr>
-                      <td>Jerry Zhao</td>
-                      <td>9</td>
-                      <td>15 hours</td>
-                      <td>6300</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
                    
                     </tr>
 
                     <tr>
-                      <td>May Tan</td>
-                      <td>9</td>
-                      <td>15 hours</td>
-                      <td>6300</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
                    
                     </tr>
 
                     <tr>
-                      <td>Kaitlin Turner</td>
-                      <td>9</td>
-                      <td>15 hours</td>
-                      <td>6300</td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
+                      <td> </td>
                    
                     </tr>
+                    <tr>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                     
+                      </tr>
                 
                   </tbody>
                 </table>
@@ -380,6 +393,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/testing.js"></script>
 
 </body>
 
